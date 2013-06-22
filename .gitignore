@@ -1,0 +1,6 @@
+*.html
+javascripts/*-min.js
+stylesheets/
+
+.DS_Store
+.sass-cache
