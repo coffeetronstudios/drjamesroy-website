@@ -1,0 +1,13 @@
+.billboard-new-patients
+{
+    background-image: image-url('new-patients-billboard.jpg'); // 1280x???
+    min-height: 400px;
+
+    p
+    {
+        color: $baseTextColor;
+        font-size: 54pt;
+        margin-top: 150px;
+        @include legible-heading(#fff);
+    }
+}

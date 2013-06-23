@@ -1,0 +1,39 @@
+.billboard-braces-care
+{
+    background-image: image-url('braces-care-billboard.jpg'); // 1280x425
+    min-height: 425px;
+
+    p
+    {
+        color: $baseTextColor;
+        font-size: 54pt;
+        margin-top: 150px;
+        @include legible-heading(#fff);
+    }
+}
+
+.common-issues
+{
+    text-align: center;
+
+    .issue
+    {
+        display: inline-block;
+        margin-left: 25px;
+        margin-right: 25px;
+        min-height: 300px;
+        vertical-align: top;
+        text-align: left;
+        width: 350px;
+    }
+}
+
+.foods-to-avoid-list
+{
+    @include clearfix;
+
+    .responsive-container-third
+    {
+        float: left;
+    }
+}

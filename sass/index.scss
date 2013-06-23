@@ -1,0 +1,96 @@
+.billboard-home
+{
+    background-image: image-url('home-billboard.jpg'); // 1280x404
+    min-height: 404px;
+
+    .text-container
+    {
+        @include border-radius(3px);
+        display: inline-block;
+        margin-top: 200px;
+        padding: 10px;
+
+        // might need tweaking or removal altogether
+        $titleBlurColor: rgba(255, 255, 255, .8);
+        background-color: $titleBlurColor;
+        @include single-box-shadow(rgba(255, 255, 255, 1), 0, 0, 10px);
+    }
+
+    .title, .subtitle
+    {
+        color: $baseTextColor;
+    }
+
+    .title
+    {
+        font-size: 48pt;
+        font-weight: 600;
+    }
+
+    .subtitle
+    {
+        font-family: Futurist, sans-serif;
+        font-size: 18pt;
+        text-transform: uppercase;
+        margin-top: 1em;
+    }
+}
+
+.our-office
+{
+    h1
+    {
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+    }
+}
+
+.introduction-panel-doctor
+{
+    background-image: image-url('doc-profile.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    h1, p
+    {
+        margin-left: 50%;
+    }
+}
+
+.introduction-panel-staff
+{
+    background-image: image-url('our-staff.jpg'); // 1280x503
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 503px;
+    position: relative;
+
+    h1
+    {
+        color: white;
+        font-size: 48pt;
+        position: absolute;
+        text-align: center;
+
+        bottom: 1em;
+        left: 0;
+        right: 0;
+
+        @include legible-heading;
+    }
+}
+
+.staff-info
+{
+    text-align: center;
+
+    .staff-names
+    {
+        font-style: italic;
+    }
+}
+
+.testimonials
+{
+    background-color: gray; // TODO: this is supposed to be a gradient
+}

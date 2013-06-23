@@ -1,0 +1,54 @@
+$baseTextColor: #c6366c;
+$lightTextColor: #9c9898;
+$navTextColor: #adadad;
+
+div, p
+{
+    font-family: "Open Sans", sans-serif;
+    color: $lightTextColor;
+}
+
+p
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    font-size: 16pt;
+    font-weight: lighter;
+    line-height: 1.5em;
+}
+
+a:link, a:visited, a:active
+{
+    color: $baseTextColor;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: $lightTextColor;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: $baseTextColor;
+}
+
+h1
+{
+    font-size: 36pt;
+    font-weight: light;
+}
+
+.theme-line
+{
+    @include background-image(linear-gradient(left, #ab0a26, #da0852));
+    height: 8px;
+}
+
+@mixin legible-heading($color: #333)
+{
+    @include single-text-shadow(0, 0, 10px, false, $color);
+}

@@ -4,3 +4,16 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300,600");
+@include font-face("Futurist", font-files("futrfw.woff", "futrfw.ttf", "futrfw.svg"), "futrfw.eot");
+
+@import "theme";
+@import "responsive";
+@import "layout";
+@import "index";
+@import "new-patients";
+@import "braces-care";
+@import "contact";

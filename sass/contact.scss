@@ -1,0 +1,36 @@
+.billboard-contact
+{
+    background-image: image-url('contact-billboard.jpg'); // 1280x431
+    min-height: 431px;
+
+    p
+    {
+        color: white;
+        font-size: 54pt;
+        margin-top: 150px;
+        @include legible-heading;
+    }
+}
+
+.contact-info-container
+{
+    @include clearfix;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    .map, .contact-info
+    {
+        float: left;
+    }
+
+    .map
+    {
+        background-color: #ccc;
+    }
+
+    .contact-info
+    {
+        box-sizing: border-box;
+        padding-left: 2em;
+    }
+}

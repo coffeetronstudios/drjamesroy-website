@@ -1,0 +1,35 @@
+.responsive-container
+{
+    margin: auto;
+}
+
+@for $i from 3 to 13
+{
+    @media screen and (min-width: ($i + 1) * 200px)
+    {
+        .responsive-container
+        {
+            width: $i * 200px;
+        }
+
+        .responsive-container-half
+        {
+            width: ($i * 200px) / 2;
+        }
+
+        .responsive-container-third
+        {
+            width: ($i * 200px) / 3;
+        }
+
+        .responsive-container-h
+        {
+            height: $i * 200px;
+        }
+
+        .responsive-container-half-h
+        {
+            height: ($i * 200px) / 2;
+        }
+    }
+}
