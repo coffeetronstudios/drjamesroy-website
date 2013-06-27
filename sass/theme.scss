@@ -1,6 +1,7 @@
 $baseTextColor: #c6366c;
 $lightTextColor: #9c9898;
 $navTextColor: #adadad;
+$experimental-support-for-svg: true;
 
 div, p
 {
@@ -45,6 +46,8 @@ h1
 // Reddish line at the top of the site and braces care issue blocks
 .theme-line
 {
+    @include filter-gradient(#ab0a26, #da0852, horizontal);
+    background: #ab0a26;
     @include background-image(linear-gradient(left, #ab0a26, #da0852));
     height: 8px;
 }
