@@ -13,9 +13,9 @@ p
     margin-top: 1em;
     margin-bottom: 1em;
 
-    font-size: 16pt;
+    font-size: 1.1em;
     font-weight: lighter;
-    line-height: 1.5em;
+    line-height: 1.75em;
 }
 
 a:link, a:visited, a:active
@@ -38,14 +38,40 @@ h1, h2, h3, h4, h5, h6
 
 h1
 {
-    font-size: 36pt;
-    font-weight: light;
+    font-size: 2.1em;
+    font-weight: 200;
 }
 
+// Reddish line at the top of the site and braces care issue blocks
 .theme-line
 {
     @include background-image(linear-gradient(left, #ab0a26, #da0852));
     height: 8px;
+}
+
+.billboard
+{
+    margin-bottom: 4em;
+    position: relative;
+
+    .billboard-title
+    {
+        position: absolute;
+        left: 20%;
+        bottom: 2em;
+
+        p
+        {
+            font-size: 54pt;
+            margin-top: 0;
+        }
+    }
+}
+
+// Adds bottom spacing for content blocks on various pages
+.content-block
+{
+    padding-bottom: 7em;
 }
 
 @mixin legible-heading($color: #333)

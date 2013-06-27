@@ -2,6 +2,8 @@
 <!-- @include header.kit -->
 
 <div class="billboard billboard-home">
+    <img src="images/home-billboard.jpg" alt="" />
+
     <div class="responsive-container">
         <div class="text-container">
             <div class="title">James N. Roy D.M.D</div>
@@ -10,7 +12,7 @@
     </div>
 </div>
 
-<div class="our-office responsive-container">
+<div class="our-office responsive-container content-block">
     <h1>Our office is your office.</h1>
 
     <p>
@@ -30,32 +32,42 @@
     </p>
 </div>
 
-<div class="introduction-panel-doctor">
-    <h1>Meet the Doctor</h1>
+<div class="introduction-panel-doctor content-block default-version">
+    <table>
+        <tr>
+            <td>
+                <img src="images/doc-profile.png" alt="" />
+            </td>
+            <td>
+                <h1>Meet the Doctor</h1>
 
-    <p>
-        Dr. Roy graduated from the University of Rhode Island earning a
-        Bachelor of Science degree in Pharmacy. He received his Doctorate of
-        Dental Medicine from Boston University. In addition to membership in
-        Omicron Kappa Upsilon, the Honorary Dental Society, Dr. Roy was awarded
-        the American Equilibration Society Award for Occlusion and
-        Temporomandibular Function, The Academy of Dental Materials Award and
-        the National Society of Dental Practitioner's Award for Law and Ethics
-        in Dentistry. Dr. Roy went on to complete a two year orthodontic
-        residency at Boston University where he earned a certificate of Advanced
-        Graduate Study in Orthodontics. He practiced in Hudson, NH, as an
-        associate before coming to Bedford.
-    </p>
+                <div class="doctor-text">
+                    <!-- @include meet-the-doctor.kit -->
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
 
-    <p>
-        Dr. Roy is a New Hampshire native. He resides in Bow, NH with his wife
-        and daughter. In his spare time, Dr. Roy enjoys skiing, mountain biking
-        and playing the guitar.
-    </p>
+<div class="introduction-panel-doctor content-block condensed-version">
+    <div class="introduction-panel-doctor-content">
+        <div class="profile-image">
+            <img src="images/doc-profile.png" alt="" />
+        </div>
+        <div class="introduction-text">
+            <h1>Meet the Doctor</h1>
+
+            <div class="doctor-text">
+                <!-- @include meet-the-doctor.kit -->
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="introduction-panel-staff">
-    <h1>Our Staff<h1>
+    <h1>Our Staff</h1>
+
+    <img src="images/our-staff.jpg" alt="" />
 </div>
 
 <div class="staff-info responsive-container">
@@ -75,8 +87,29 @@
 </div>
 
 <div class="testimonials">
-    <!-- class=quote, fontStyle=italic, color=textColorLight, textAlign=center -->
-    <!-- class=name, fontStyle=italic, color=black, textAlign=right -->
+    <div class="testimonials-inner responsive-container">
+        <!-- class=quote, fontStyle=italic, color=textColorLight, textAlign=center -->
+        <!-- class=name, fontStyle=italic, color=black, textAlign=right -->
+        <table class="testimonial">
+            <tr>
+                <td>
+                    <blockquote>
+                        "Faced with the challenges of having five children who will all
+                        probably need to have orthodontic work done, we asked many friends
+                        in the community for their advice on choosing an orthodontist. Dr.
+                        Roy was clearly the best choice for our family. Three of our
+                        children have already been patients for quite some time and we have
+                        another child scheduled to get her braces next week. Dr. Roy and his
+                        staff have always made our family feel comfortable and we are always
+                        greeted with a smile. I strongly recommend Dr. Roy for your
+                        orthodontic needs!"
+                    </blockquote>
+                    <p class="name">Carry W.</p>
+                </td>
+            </tr>
+        </table>
+        <div class="dots"><div class="dot"></div><div class="dot active"></div><div class="dot"></div></div>
+    </div>
 </div>
 
 <!-- @include footer.kit -->

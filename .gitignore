@@ -1,4 +1,5 @@
 *.html
+javascripts/*-ck.js
 javascripts/*-min.js
 stylesheets/
 

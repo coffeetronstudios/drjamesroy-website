@@ -1,9 +1,25 @@
+body
+{
+    padding-top: 101px;
+}
+
+$billboardBorderColor: #efefef;
+
 .header
 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid $billboardBorderColor;
+    z-index: 999999;
+
     .navigation
     {
         width: 100%;
-        height: 120px;
+        height: 100px;
 
         $navItemWidth: 20%;
 
@@ -36,13 +52,13 @@
 {
     background-position: center;
     background-repeat: no-repeat;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $billboardBorderColor;
 }
 
 .footer
 {
-    background-color: red; // TODO: should be a vertical gradient
+    background-color: rgb(236, 10, 92);
+    @include background(linear-gradient(top, rgb(236, 10, 92), rgb(177, 0, 19)));
     padding: 1em;
 
     p, a:link, a:visited, a:hover, a:active

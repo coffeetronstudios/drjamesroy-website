@@ -1,14 +1,24 @@
 .billboard-braces-care
 {
-    background-image: image-url('braces-care-billboard.jpg'); // 1280x425
-    min-height: 425px;
-
-    p
+    img
     {
-        color: $baseTextColor;
-        font-size: 54pt;
-        margin-top: 150px;
-        @include legible-heading(#fff);
+        display: block;
+        width: 100%;
+    }
+
+    .responsive-container
+    {
+        position: relative;
+
+        p
+        {
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            color: $baseTextColor;
+            font-size: 54pt;
+        }
     }
 }
 

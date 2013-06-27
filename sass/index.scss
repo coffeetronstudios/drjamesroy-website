@@ -1,38 +1,41 @@
 .billboard-home
 {
-    background-image: image-url('home-billboard.jpg'); // 1280x404
-    min-height: 404px;
-
-    .text-container
+    img
     {
-        @include border-radius(3px);
-        display: inline-block;
-        margin-top: 200px;
-        padding: 10px;
-
-        // might need tweaking or removal altogether
-        $titleBlurColor: rgba(255, 255, 255, .8);
-        background-color: $titleBlurColor;
-        @include single-box-shadow(rgba(255, 255, 255, 1), 0, 0, 10px);
+        display: block;
+        width: 100%;
     }
 
-    .title, .subtitle
+    .responsive-container
     {
-        color: $baseTextColor;
-    }
+        position: relative;
 
-    .title
-    {
-        font-size: 48pt;
-        font-weight: 600;
-    }
+        .text-container
+        {
+            position: absolute;
+            left: 0;
+            bottom: 0.5em;
 
-    .subtitle
-    {
-        font-family: Futurist, sans-serif;
-        font-size: 18pt;
-        text-transform: uppercase;
-        margin-top: 1em;
+            font-size: 2.1em;
+
+            .title, .subtitle
+            {
+                color: $baseTextColor;
+            }
+
+            .title
+            {
+                font-weight: 600;
+            }
+
+            .subtitle
+            {
+                font-family: Futurist, sans-serif;
+                font-size: 0.3em;
+                text-transform: uppercase;
+                margin-top: 1em;
+            }
+        }
     }
 }
 
@@ -47,23 +50,75 @@
 
 .introduction-panel-doctor
 {
-    background-image: image-url('doc-profile.png');
-    background-position: left center;
+    background-image: image-url('radial-shadow-top.png');
+    background-position: center top;
     background-repeat: no-repeat;
 
-    h1, p
+    padding-top: 5em;
+
+    &.default-version
     {
-        margin-left: 50%;
+        table
+        {
+            margin: auto;
+            width: 75%;
+        }
+
+        td:first-child
+        {
+            padding-right: 5em;
+            vertical-align: top;
+            width: 20%;
+        }
+
+        @media screen and (max-width: 1023px)
+        {
+            display: none;
+        }
     }
+
+    &.condensed-version
+    {
+        margin: auto;
+        width: 90%;
+
+        img
+        {
+            max-width: 90%;
+        }
+
+        .profile-image, h1
+        {
+            text-align: center;
+        }
+
+        h1
+        {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        p
+        {
+            text-align: justify;
+        }
+
+        @media screen and (min-width: 1024px)
+        {
+            display: none;
+        }
+    }
+
 }
 
 .introduction-panel-staff
 {
-    background-image: image-url('our-staff.jpg'); // 1280x503
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 503px;
     position: relative;
+
+    img
+    {
+        width: 100%;
+    }
 
     h1
     {
@@ -72,17 +127,18 @@
         position: absolute;
         text-align: center;
 
-        bottom: 1em;
+        bottom: 0.5em;
         left: 0;
         right: 0;
-
-        @include legible-heading;
     }
 }
 
 .staff-info
 {
     text-align: center;
+
+    margin-top: 5em;
+    margin-bottom: 5em;
 
     .staff-names
     {
@@ -92,5 +148,57 @@
 
 .testimonials
 {
-    background-color: gray; // TODO: this is supposed to be a gradient
+    @include background-image(image-url("white-radial-shadow-top.png"), radial-gradient(50% 50%, rgb(254, 254, 254) 0%, rgb(246, 246, 246) 100%));
+    background-position: 0 -2px; // TODO: remove when image is fixed
+    background-repeat: no-repeat;
+
+    font-style: italic;
+
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+    .testimonials-inner
+    {
+        width: 40%;
+
+        .testimonial
+        {
+            min-height: 350px;
+
+            blockquote
+            {
+                font-weight: 200;
+                line-height: 1.5em;
+                text-align: center;
+            }
+
+            .name
+            {
+                color: #383838;
+                text-align: right;
+            }
+        }
+    }
+
+    .dots
+    {
+        text-align: center;
+
+        .dot
+        {
+            background-image: image-url("ui/circle-grey.png");
+            background-size: 9px 9px;
+            cursor: pointer;
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            &.active
+            {
+                background-image: image-url("ui/circle-purple.png");
+            }
+        }
+    }
 }
