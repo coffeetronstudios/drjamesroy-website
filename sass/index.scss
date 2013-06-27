@@ -149,7 +149,6 @@
 .testimonials
 {
     @include background-image(image-url("white-radial-shadow-top.png"), radial-gradient(50% 50%, rgb(254, 254, 254) 0%, rgb(246, 246, 246) 100%));
-    background-position: 0 -2px; // TODO: remove when image is fixed
     background-repeat: no-repeat;
 
     font-style: italic;
