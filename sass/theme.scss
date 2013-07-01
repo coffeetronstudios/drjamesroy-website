@@ -81,3 +81,65 @@ h1
 {
     @include single-text-shadow(0, 0, 10px, false, $color);
 }
+
+.sxs-panel
+{
+    background-image: image-url('radial-shadow-top.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    padding-top: 5em;
+
+    &.default-version
+    {
+        table
+        {
+            margin: auto;
+            width: 75%;
+        }
+
+        td:first-child
+        {
+            padding-right: 5em;
+            vertical-align: top;
+            width: 20%;
+        }
+
+        @media screen and (max-width: 1023px)
+        {
+            display: none;
+        }
+    }
+
+    &.condensed-version
+    {
+        margin: auto;
+        width: 90%;
+
+        img
+        {
+            max-width: 90%;
+        }
+
+        .image, h1
+        {
+            text-align: center;
+        }
+
+        h1
+        {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        p
+        {
+            text-align: justify;
+        }
+
+        @media screen and (min-width: 1024px)
+        {
+            display: none;
+        }
+    }
+}
