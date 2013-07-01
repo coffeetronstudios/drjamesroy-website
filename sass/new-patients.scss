@@ -5,3 +5,80 @@
         color: $baseTextColor;
     }
 }
+
+.diagnostic-records
+{
+    img
+    {
+        display: block;
+        width: 100%;
+    }
+
+    .diagnostic-records-inner
+    {
+        background-color: white;
+        margin-top: -13em;
+        padding: 5em 10em;
+        position: relative;
+    }
+}
+
+.braces-info
+{
+    background-image: image-url("braces-retention-background.jpg");
+    background-size: 100% auto;
+
+    .sxs-panel
+    {
+        background-image: none;
+        font-size: 0.9em;
+        padding: 3em 0;
+
+        td
+        {
+            vertical-align: top;
+        }
+
+        p:first-child
+        {
+            margin-top: 0;
+        }
+    }
+}
+
+.before-and-after
+{
+    margin: 8em 0;
+
+    .slide
+    {
+        margin: 3em 0;
+        width: 100%;
+
+        td
+        {
+            color: $baseTextColor;
+            font-style: italic;
+            font-weight: 200;
+            line-height: 2em;
+            text-align: center;
+            width: 50%;
+        }
+    }
+}
+
+.financing-options
+{
+    text-align: center;
+
+    p
+    {
+        color: $baseTextColor;
+    }
+
+    li
+    {
+        font-weight: 200;
+        line-height: 1.5em;
+    }
+}
