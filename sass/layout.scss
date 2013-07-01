@@ -57,9 +57,9 @@ $billboardBorderColor: #efefef;
 
 .footer
 {
-    @include filter-gradient(rgb(236, 10, 92), rgb(177, 0, 19), vertical);
-    background: rgb(236, 10, 92);
-    @include background(linear-gradient(top, rgb(236, 10, 92), rgb(177, 0, 19)));
+    @include filter-gradient(#da0851, #a60a21, vertical);
+    background: #da0851;
+    @include background(linear-gradient(top, #da0851, #a60a21));
 
     padding: 1em;
 
