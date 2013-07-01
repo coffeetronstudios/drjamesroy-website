@@ -149,3 +149,28 @@ h1
         }
     }
 }
+
+.carousel
+{
+    .dots
+    {
+        text-align: center;
+
+        .dot
+        {
+            background-image: image-url("ui/circle-grey.png");
+            background-size: 9px 9px;
+            cursor: pointer;
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            &.active
+            {
+                background-image: image-url("ui/circle-purple.png");
+            }
+        }
+    }
+}
