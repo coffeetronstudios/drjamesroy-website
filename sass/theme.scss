@@ -57,6 +57,12 @@ h1
     margin-bottom: 4em;
     position: relative;
 
+    img
+    {
+        display: block;
+        width: 100%;
+    }
+
     .billboard-title
     {
         position: absolute;

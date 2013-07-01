@@ -1,24 +1,8 @@
 .billboard-braces-care
 {
-    img
-    {
-        display: block;
-        width: 100%;
-    }
-
-    .responsive-container
-    {
-        position: relative;
-
         p
         {
-            position: absolute;
-            left: 0;
-            top: 0;
-
             color: $baseTextColor;
-            font-size: 54pt;
-        }
     }
 }
 
