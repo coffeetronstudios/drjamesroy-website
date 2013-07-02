@@ -71,8 +71,17 @@ h1
 
         p
         {
-            font-size: 54pt;
+            font-size: 4.5em;
             margin-top: 0;
+
+            color: white;
+            font-weight: 400;
+            @include text-shadow(0 1px 3px #5c5c5c);
+
+            @media screen and (max-width: 1024px)
+            {
+                font-size: 3.5em;
+            }
         }
     }
 }
