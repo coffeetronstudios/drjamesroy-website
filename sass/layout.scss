@@ -21,13 +21,17 @@ $billboardBorderColor: #efefef;
         width: 100%;
         height: 100px;
 
-        $navItemWidth: 20%;
-
         .nav
         {
+            padding: 0 1.2em;
             text-align: center;
             vertical-align: middle;
-            width: $navItemWidth;
+            white-space: nowrap;
+
+            @media screen and (min-width: 1024px)
+            {
+                padding: 2em;
+            }
 
             a:link, a:visited, a:active
             {
@@ -43,7 +47,7 @@ $billboardBorderColor: #efefef;
         .nav-home
         {
             text-align: left;
-            width: 100% - ($navItemWidth * 3);
+            width: 100%;
         }
     }
 }
