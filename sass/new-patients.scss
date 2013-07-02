@@ -17,9 +17,16 @@
     .diagnostic-records-inner
     {
         background-color: white;
+        box-sizing: border-box;
         margin-top: -13em;
-        padding: 5em 10em;
+        padding: 5em 7em;
         position: relative;
+
+        @media screen and (max-width: 1280px)
+        {
+            margin-top: -7em;
+            width: 80%;
+        }
     }
 }
 
@@ -34,9 +41,25 @@
         font-size: 0.9em;
         padding: 3em 0;
 
+        p
+        {
+            color: #666;
+        }
+
         td
         {
             vertical-align: top;
+        }
+
+        // table cells containing red hexagons
+        .hex-label
+        {
+            padding-left: 1.5em;
+
+            img
+            {
+                width: 150px;
+            }
         }
 
         p:first-child
@@ -63,6 +86,11 @@
             line-height: 2em;
             text-align: center;
             width: 50%;
+
+            img
+            {
+                width: 100%;
+            }
         }
     }
 }
