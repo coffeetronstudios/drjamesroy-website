@@ -86,10 +86,22 @@
 {
     margin: 8em 0;
 
+    .responsive-container
+    {
+        position: relative;
+    }
+
+    .slides-container
+    {
+        height: 600px;
+    }
+
     .slide
     {
         margin: 3em 0;
         width: 100%;
+
+        position: absolute;
 
         td
         {
