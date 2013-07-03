@@ -9,6 +9,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300,600");
 @include font-face("Futurist", font-files("futrfw.woff", "futrfw.ttf", "futrfw.svg"), "futrfw.eot");
+@include font-face("Eurofurence", font-files("eurof.woff", "eurof.ttf", "eurof.svg"), "eurof.eot");
 
 @import "theme";
 @import "responsive";
