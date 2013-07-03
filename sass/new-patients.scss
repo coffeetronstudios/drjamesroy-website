@@ -33,7 +33,12 @@
 .braces-info
 {
     background-image: image-url("braces-retention-background.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
     background-size: 100% auto;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    margin-top: 3em;
 
     .sxs-panel
     {
@@ -43,7 +48,7 @@
 
         p
         {
-            color: #666;
+            color: #3c3c3c;
         }
 
         td
@@ -56,9 +61,17 @@
         {
             padding-left: 1.5em;
 
-            img
+            div
             {
+                background-image: image-url("ui/hexagon.png");
+                background-repeat: no-repeat;
+                background-size: 100%;
                 width: 150px;
+                height: 166px;
+                line-height: 166px;
+                text-align: center;
+                color: white;
+                font-size: 1.4em;
             }
         }
 
