@@ -92,11 +92,15 @@
 
     .testimonials-inner
     {
+        position: relative;
         width: 40%;
+        height: 350px;
 
         .testimonial
         {
-            min-height: 350px;
+            height: 350px;
+            width: 100%;
+            position: absolute;
 
             blockquote
             {
