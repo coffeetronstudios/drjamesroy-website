@@ -3,6 +3,11 @@ $lightTextColor: #7e7e7e;
 $navTextColor: #adadad;
 $experimental-support-for-svg: true;
 
+body, .diagnostic-records-inner
+{
+    background-color: white;
+}
+
 div, p
 {
     font-family: "Open Sans", sans-serif;
