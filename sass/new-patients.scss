@@ -40,6 +40,11 @@
     padding-bottom: 5em;
     margin-top: 3em;
 
+    @media screen and (max-width: 1024px)
+    {
+        background-image: image-url("braces-retention-background-large.jpg");
+    }
+
     .sxs-panel
     {
         background-image: none;
