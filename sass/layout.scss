@@ -49,6 +49,16 @@ $billboardBorderColor: #efefef;
             text-align: left;
             width: 100%;
         }
+
+        .nav:first-child
+        {
+            padding-left: 0;
+        }
+
+        .nav:last-child
+        {
+            padding-right: 0;
+        }
     }
 }
 
