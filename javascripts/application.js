@@ -36,7 +36,7 @@ $(function() {
         function setupCarouselTimer() {
             tid = window.setInterval(function() {
                 setCarouselIndex((currentSlide + 1) % slides.size());
-            }, 3000);
+            }, parseInt(cont.data('delay'), 10));
         }
 
         setCarouselIndex(0);
