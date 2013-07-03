@@ -65,7 +65,7 @@ $billboardBorderColor: #efefef;
     background: #da0851;
     @include background(linear-gradient(top, #da0851, #a60a21));
 
-    padding: 1em;
+    padding: 2.5em 0 1em 0;
 
     p, a:link, a:visited, a:hover, a:active
     {
