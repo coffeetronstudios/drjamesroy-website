@@ -1,6 +1,9 @@
 <!-- $pageTitle = Contact -->
 <!-- @include header.kit -->
 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="javascripts/map.js"></script>
+
 <div class="billboard billboard-contact">
     <img src="images/contact-billboard.jpg" alt="" />
 
@@ -10,30 +13,28 @@
 </div>
 
 <div class="contact-info-container responsive-container">
-    <div class="map responsive-container-half responsive-container-half-h">
-    </div>
-    <div class="contact-info responsive-container-half">
-        <h1>Get in touch</h1>
+    <h1>Get in touch</h1>
 
-        <p>
-            We understand your time is valuable and we take great pride in our
-            ability to see our patients at their scheduled appointment time. We
-            invite you to speak with the staff or doctor at any time. We are
-            always available for any questions or concerns you may have. New
-            patients are always welcome and you do not need a referral.
-        </p>
+    <p>
+        We understand your time is valuable and we take great pride in our
+        ability to see our patients at their scheduled appointment time. We
+        invite you to speak with the staff or doctor at any time. We are
+        always available for any questions or concerns you may have. New
+        patients are always welcome and you do not need a referral.
+    </p>
 
-        <p>
-            To schedule your complimentary initial exam, please call
-            <a href="tel:16036222100">603-622-2100</a> and one of our staff
-            members will be happy to help you.
-        </p>
+    <p>
+        To schedule your complimentary initial exam, please call
+        <a href="tel:16036222100">603-622-2100</a> and one of our staff
+        members will be happy to help you.
+    </p>
 
-        <p>
-            You may also email us at
-            <a href="mailto:info@drjamesroy.com">info@drjamesroy.com</a>.
-        </p>
-    </div>
+    <p>
+        You may also email us at
+        <a href="mailto:info@drjamesroy.com">info@drjamesroy.com</a>.
+    </p>
 </div>
+
+<div id="map-canvas"></div>
 
 <!-- @include footer.kit -->

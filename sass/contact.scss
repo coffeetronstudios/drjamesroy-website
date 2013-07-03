@@ -11,20 +11,37 @@
     @include clearfix;
     margin-top: 2em;
     margin-bottom: 2em;
+}
 
-    .map, .contact-info
-    {
-        float: left;
-    }
+#map-canvas
+{
+    margin: 4em auto 0 auto;
+    width: 100%;
+    height: 600px;
+}
 
-    .map
-    {
-        background-color: #ccc;
-    }
+.map-pin
+{
+    background-image: image-url("ui/map-pin.png");
+    text-align: center;
 
-    .contact-info
+    width: 200px;
+    height: 238px;
+
+    opacity: 0.85;
+
+    div
     {
-        box-sizing: border-box;
-        padding-left: 2em;
+        color: white;
+        font-size: 0.95em;
+        font-weight: 200;
+        line-height: 1.5em;
+
+        &.street-number
+        {
+            font-size: 1.7em;
+            line-height: 1.2em;
+            padding-top: 1.1em;
+        }
     }
 }
