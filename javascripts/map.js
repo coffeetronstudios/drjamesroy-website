@@ -44,7 +44,8 @@ function initialize() {
         zoom: 12,
         center: myLatLng,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: false
+        scrollwheel: false,
+        draggable: false
     };
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
