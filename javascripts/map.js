@@ -18,6 +18,10 @@ OfficeOverlay.prototype.onAdd = function() {
     var panes = this.getPanes();
     panes.overlayMouseTarget.appendChild(this.div_);
 
+    $('a').click(function(e) {
+        e.stopPropagation();
+    });
+
     google.maps.event.addDomListener(this.div_, 'click', function() {
         window.open('https://www.google.com/maps?q=502+Riverway+Place,+Bedford,+NH+03110', '_blank');
     });
