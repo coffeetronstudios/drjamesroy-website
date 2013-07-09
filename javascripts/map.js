@@ -1,44 +1,50 @@
-var map;
-var chicago = new google.maps.LatLng(42.962497, -71.47942);
+/*global google:false*/
 
-function HomeControl(controlDiv, map) {
-  controlDiv.style.padding = '5px';
-  var controlUI = document.createElement('div');
-  controlUI.className = 'map-pin';
-  controlUI.title = 'Click to set the map to Home';
-  controlUI.innerHTML =
-    '<a target="_blank" href="https://www.google.com/maps?q=502+Riverway+Place,+Bedford,+NH+03110&amp;sll=42.9625858999999,-71.47875199999999&amp;sspn=0.007224072552652955,0.011438267997772361&amp;t=m&amp;dg=opt&amp;hnear=Riverway+Pl,+Bedford,+Hillsborough,+New+Hampshire+03110&amp;z=16">' +
-    '<div class="street-number">502</div>' +
-    '<div>Riverway Place</div>' +
-    '<div>Bedford, NH 03110</div>' +
-    '<div>603.622.2100</div>' +
-    '<div>Fax: 602.622.5665</div>' +
-    '</a>';
-  controlDiv.appendChild(controlUI);
+var overlay;
 
-  google.maps.event.addDomListener(controlUI, 'click', function() {
-    map.setCenter(chicago);
-  });
+function OfficeOverlay(latLng, map) {
+    this.latLng_ = latLng;
+    this.map_ = map;
+    this.div_ = null;
+    this.setMap(map);
 }
 
+OfficeOverlay.prototype = new google.maps.OverlayView();
+
+OfficeOverlay.prototype.onAdd = function() {
+    this.div_ = document.getElementById('map-pin');
+    this.div_.style.position = 'absolute';
+
+    var panes = this.getPanes();
+    panes.overlayMouseTarget.appendChild(this.div_);
+
+    google.maps.event.addDomListener(this.div_, 'click', function() {
+        window.open('https://www.google.com/maps?q=502+Riverway+Place,+Bedford,+NH+03110', '_blank');
+    });
+};
+
+OfficeOverlay.prototype.draw = function() {
+    var px = this.getProjection().fromLatLngToDivPixel(this.latLng_);
+    this.div_.style.left = (px.x - (this.div_.offsetWidth / 2)) + 'px';
+    this.div_.style.top = (px.y - this.div_.offsetHeight) + 'px';
+};
+
+OfficeOverlay.prototype.onRemove = function() {
+    this.div_.parentNode.removeChild(this.div_);
+    this.div_ = null;
+};
+
 function initialize() {
-  var mapDiv = document.getElementById('map-canvas');
-  var mapOptions = {
-    zoom: 12,
-    center: chicago,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false,
-    navigationControl: false,
-    scaleControl: false,
-    draggable: false
-  }
-  map = new google.maps.Map(mapDiv, mapOptions);
+    var myLatLng = new google.maps.LatLng(42.962497, -71.47942);
+    var mapOptions = {
+        zoom: 12,
+        center: myLatLng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: false
+    };
 
-  var homeControlDiv = document.createElement('div');
-  var homeControl = new HomeControl(homeControlDiv, map);
-
-  homeControlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.CENTER].push(homeControlDiv);
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    overlay = new OfficeOverlay(myLatLng, map);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);

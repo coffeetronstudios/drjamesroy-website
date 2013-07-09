@@ -25,6 +25,9 @@
     background-image: image-url("ui/map-pin.png");
     text-align: center;
 
+    position: absolute;
+    left: -9999em;
+    top: -9999em;
     width: 200px;
     height: 238px;
 
