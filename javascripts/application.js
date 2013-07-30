@@ -17,6 +17,15 @@ $(function() {
 
         var cont = $('.carousel');
         var slides = $('.slide', cont);
+        var dotsContainer = $('<div class="dots"></div>')
+                                .appendTo($('<div class="responsive-container"></div>')
+                                    .appendTo(cont));
+
+        // Add dots equal to the number of slides
+        for (var i = 0; i < slides.size(); ++i) {
+            $('<div class="dot"></div>').appendTo(dotsContainer);
+        }
+
         var dots = $('.dot', cont);
 
         function setCarouselIndex(i) {
